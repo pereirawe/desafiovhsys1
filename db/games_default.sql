@@ -1,0 +1,13 @@
+CREATE TABLE `games` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`registratioDate` TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+	`date` TIMESTAMP NULL DEFAULT NULL,
+	`location` TEXT NOT NULL,
+	`referee` TEXT NOT NULL,
+	`localTeamId` INT(11) NOT NULL,
+	`visitorTeamId` INT(11) NOT NULL,
+	INDEX `id` (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
