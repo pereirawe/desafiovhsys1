@@ -24,12 +24,12 @@ class GamesController extends MainController{
     public function crear(){
         if(isset($_POST["nombre"])){
             //Create a Game
-            $usuario=new Usuario();
-            $usuario->setNombre($_POST["nombre"]);
-            $usuario->setApellido($_POST["apellido"]);
-            $usuario->setEmail($_POST["email"]);
-            $usuario->setPassword(sha1($_POST["password"]));
-            $save=$usuario->save();
+            $game=new Game();
+            $game->setNombre($_POST["nombre"]);
+            $game->setApellido($_POST["apellido"]);
+            $game->setEmail($_POST["email"]);
+            $game->setPassword(sha1($_POST["password"]));
+            $save=$game->save();
         }
         $this->redirect("Games", "index");
     }
